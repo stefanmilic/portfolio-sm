@@ -12,11 +12,11 @@ const App: React.FC = () => {
     <Router>
       <NavBar />
       <Switch>
-        <Route exact path='/' component={Home} />
         <Route path='/about' component={About} />
         <Route path='/my-work' component={MyWork} />
         <Route path='/technologies' component={Technologies} />
         <Route path='/contact' component={Contact} />
+        <Route exact path='/' component={Home} />
       </Switch>
     </Router>
   );

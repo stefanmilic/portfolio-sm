@@ -8,6 +8,11 @@ export default class NavBar extends Component {
   state = {
     toggle: false,
   };
+
+  handleToggleChange = () => {
+    this.setState({ toggle: !this.state.toggle });
+  };
+
   render() {
     const { toggle } = this.state;
     const links = [
@@ -21,7 +26,7 @@ export default class NavBar extends Component {
       <header className={b('header')}>
         <div
           className={b('menu-btn', { close: toggle })}
-          onClick={() => this.setState({ toggle: !toggle })}
+          onClick={this.handleToggleChange}
         >
           <div className={b('btn-line')}></div>
           <div className={b('btn-line')}></div>
@@ -29,13 +34,18 @@ export default class NavBar extends Component {
         </div>
         <nav className={b('menu', { show: toggle })}>
           <div className={b('menu-branding', { show: toggle })}>
-            <div className='portrait'></div>
+            <div className={b('portrait')}></div>
           </div>
           <ul className={b('menu-nav', { show: toggle })}>
             {links.map(item => {
               return (
                 <li className={b('nav-item', { show: toggle })} key={item.name}>
-                  <NavLink to={item.link} className={b('nav-item-link')}>
+                  <NavLink
+                    exact
+                    to={item.link}
+                    className={b('nav-item-link')}
+                    onClick={this.handleToggleChange}
+                  >
                     {item.name}
                   </NavLink>
                 </li>

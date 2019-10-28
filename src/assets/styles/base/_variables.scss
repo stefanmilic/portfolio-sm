@@ -1,0 +1,8 @@
+$primary-color: #444;
+$secondary-color: #eece1a;
+$background-opacity: 0.8;
+
+@mixin easeOut {
+  //this is like funtion
+  transition: all 0.5s ease-out;
+}

@@ -1,7 +1,7 @@
 .nav-bar {
   &__menu-btn {
     position: fixed;
-    z-index: 3;
+    z-index: 999;
     right: 10%;
     top: 35px;
     cursor: pointer;
@@ -10,7 +10,7 @@
     &_close {
       transform: rotate(180deg);
 
-      .home-page__btn-line {
+      .nav-bar__btn-line {
         position: relative;
         &:nth-child(1) {
           transform: rotate(45deg) translate(10px, 11px);
@@ -31,5 +31,107 @@
     margin-bottom: 5px;
     background: #fff;
     transition: all 0.5s ease-out;
+  }
+
+  // menu
+  &__menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.95;
+    z-index: 99;
+    visibility: hidden;
+
+    &_show {
+      visibility: visible;
+    }
+  }
+
+  &__menu-branding,
+  &__menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100vh;
+    float: left;
+    overflow: hidden;
+  }
+
+  &__menu-nav {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style-type: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    &_show {
+      //slide in from top
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__nav-item {
+    transform: translate3d(600px, 0, 0);
+    @include easeOut;
+    &_show {
+      //slide in from bottom
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  &__nav-item-link {
+    display: block;
+    position: relative;
+    font-size: 23px;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      @include easeOut;
+      color: $secondary-color;
+    }
+  }
+
+  &__nav-item-link.active {
+    color: $secondary-color;
+  }
+
+  //Bradning side
+  &__menu-branding {
+    @include easeOut;
+    background: $primary-color;
+    transform: translate3d(0, 100%, 0);
+
+    &_show {
+      //slide in from bottom
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  // portrait
+  &__portrait {
+    background-image: url('~@images/me2.jpg');
+    background-size: cover;
+    width: 250px;
+    margin-left: -45px;
+    margin-top: -600px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid $secondary-color;
+  }
+
+  // delay each nav item slide by 0.1
+
+  @for $x from 1 through 5 {
+    &__nav-item:nth-child(#{$x}) {
+      transition-delay: $x * 0.1s;
+    }
   }
 }
