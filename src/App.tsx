@@ -1,31 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
+import React from 'react';
+import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import Home from '@components/Home';
+import About from '@components/About';
+import Tehnologies from '@components/Tehnologies';
+import Contact from '@components/Contact';
 
 const App: React.FC = () => {
-  const [count] = useState();
-  let a = '';
-
-  useEffect(() => {
-    console.log(count);
-  }, [count]);
-
   return (
-    <div className='App'>
-      <header className='App-header'>
-        <img src={logo} className='App-logo' alt='logo' />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React {a}
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Switch>
+        <Route exact path='/' component={Home} />
+        <Route path='/about' component={About} />
+        <Route path='/tehnologies' component={Tehnologies} />
+        <Route path='/contact' component={Contact} />
+      </Switch>
+    </Router>
   );
 };
 
