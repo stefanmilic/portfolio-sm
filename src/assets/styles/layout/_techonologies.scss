@@ -1,0 +1,32 @@
+.technologies-page {
+  &__list-program1 {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      margin: 10px;
+      padding: 10px;
+      background: #fff;
+      color: #000;
+      border: 2px solid $secondary_color;
+    }
+  }
+
+  &__card {
+    width: 200px;
+    height: 200px;
+  }
+
+  &__card-header {
+    height: 80%;
+    text-align: center;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  &__footer {
+    height: 20%;
+  }
+}

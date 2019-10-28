@@ -3,7 +3,7 @@
 body {
   margin: 0;
   font-family: $base-font-family;
-  color: white;
+  color: set-text-color($primary-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
