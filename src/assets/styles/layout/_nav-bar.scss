@@ -1,0 +1,35 @@
+.nav-bar {
+  &__menu-btn {
+    position: fixed;
+    z-index: 3;
+    right: 10%;
+    top: 35px;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+
+    &_close {
+      transform: rotate(180deg);
+
+      .home-page__btn-line {
+        position: relative;
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(10px, 11px);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+
+  &__btn-line {
+    width: 28px;
+    height: 3px;
+    margin-bottom: 5px;
+    background: #fff;
+    transition: all 0.5s ease-out;
+  }
+}
