@@ -43,7 +43,7 @@ export default class NavBar extends Component {
                   <NavLink
                     exact
                     to={item.link}
-                    className={b('nav-item-link')}
+                    className={String(b('nav-item-link'))}
                     onClick={this.handleToggleChange}
                   >
                     {item.name}
