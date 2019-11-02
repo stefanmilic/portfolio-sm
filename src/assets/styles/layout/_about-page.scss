@@ -2,19 +2,41 @@
   &__about-info {
     display: grid;
     grid-gap: 30px;
+    padding-bottom: 150px;
     grid-template-areas:
       'bioimage bio bio'
       'job1 job1 job1'
       'job2 job2 job2'
       'job3 job3 job3';
     grid-template-columns: 1fr 1fr 1fr;
+
+    @include responsive('tablet') {
+      grid-template-areas:
+        'bioimage'
+        'bio'
+        'job1'
+        'job2'
+        'job3';
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+
+    p {
+      text-align: justify;
+    }
   }
 
   &__bioimage {
     grid-area: bioimage;
-    margin: auto;
+    margin-top: 44px;
     border-radius: 50%;
     border: 3px solid $secondary-color;
+
+    @include responsive('tablet') {
+      margin: auto;
+      width: 220px;
+      height: 220px;
+    }
   }
 
   &__bio {
@@ -59,6 +81,13 @@
     padding: 1rem 2rem;
     @include easeOut;
 
+    @include responsive('desktop-sd') {
+      font-size: 1.8rem;
+    }
+
+    @include responsive('tablet') {
+      font-size: 1.6rem;
+    }
     &:hover {
       background-color: $secondary-color;
       color: set-text-color($secondary-color);
@@ -70,5 +99,10 @@
 
   &__text-secondary {
     color: $secondary-color;
+
+    @include responsive('tablet') {
+      margin: 0;
+      text-align: left;
+    }
   }
 }

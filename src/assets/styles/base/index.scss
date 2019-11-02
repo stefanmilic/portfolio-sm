@@ -2,9 +2,15 @@
 * {
   box-sizing: border-box;
 }
+html {
+  height: 100%;
+}
 
 body {
+  min-height: 100%;
+  padding: 0;
   margin: 0;
+  position: relative;
   font-family: $base-font-family;
   color: set-text-color($primary-color);
   -webkit-font-smoothing: antialiased;

@@ -1,11 +1,53 @@
 .home-page {
   &__name {
-    margin-top: 20vh;
+    padding-top: 20vh;
     font-size: 6rem;
     color: rgba(239, 208, 35, 0.6);
+
+    @include responsive('tablet') {
+      font-size: 5rem;
+      line-height: 1.4;
+    }
+
+    @include responsive('mobile') {
+      margin-bottom: 20px;
+      line-height: 1;
+    }
   }
 
   &__position {
     font-size: 1.5em;
+  }
+
+  &__icons {
+    margin: 10px;
+
+    svg {
+      margin-right: 10px;
+      cursor: pointer;
+
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+
+  &__quote {
+    position: absolute;
+    right: 20%;
+    top: 20%;
+    width: 230px;
+
+    @include responsive('desktop-sd') {
+      right: 10%;
+      top: 14%;
+    }
+
+    @include responsive('tablet') {
+      position: static;
+      margin-top: 40px;
+      text-align: center;
+      margin: auto;
+    }
   }
 }

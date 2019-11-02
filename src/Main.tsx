@@ -6,7 +6,7 @@ import App from './App';
 
 const b = block('portfolio');
 
-const Home = () => {
+const Main = () => {
   useEffect(() => {
     AOS.init({
       duration: 2000,
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Main;

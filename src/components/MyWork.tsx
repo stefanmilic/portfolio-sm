@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { block } from 'bem-cn';
+import Typist from 'react-typist';
 import { Button, Modal } from 'react-bootstrap';
 import { myProjects } from 'src/Data/Projects';
 
@@ -60,6 +61,7 @@ function ModalContainer({ show, onClose, text, name }: ModalProps) {
 
 const MyWork = () => {
   const [show, setShow] = useState(false);
+  const [done, setDone] = useState(false);
   const [modalData, setModalData] = useState({ text: '', name: '' });
 
   const handleClose = () => setShow(false);
@@ -74,23 +76,35 @@ const MyWork = () => {
         My <span className={b('text-secondary')}>Work</span>
       </h1>
       <div className={b('sm-heading')}>
-        <h2 className={b('scale')}>Check out some of my projects...</h2>
+        <h2 className={b('scale')}>
+          <Typist
+            avgTypingDelay={70}
+            startDelay={100}
+            onTypingDone={() => setDone(true)}
+            cursor={{ hideWhenDone: true, hideWhenDoneDelay: 300 }}
+          >
+            Check out some of my projects...
+          </Typist>
+        </h2>
       </div>
-      <div className={b('projects')}>
-        {myProjects.map(project => (
-          <Project
-            key={project.id}
-            onHandleShow={() => handleShow(project)}
-            {...project}
+
+      {done ? (
+        <div className={b('projects')}>
+          {myProjects.map(project => (
+            <Project
+              key={project.id}
+              onHandleShow={() => handleShow(project)}
+              {...project}
+            />
+          ))}
+          <ModalContainer
+            show={show}
+            onClose={handleClose}
+            name={modalData.name}
+            text={modalData.text}
           />
-        ))}
-        <ModalContainer
-          show={show}
-          onClose={handleClose}
-          name={modalData.name}
-          text={modalData.text}
-        />
-      </div>
+        </div>
+      ) : null}
     </main>
   );
 };

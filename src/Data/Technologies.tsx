@@ -11,7 +11,7 @@ import ReactIcon from '@images/tehnologies/frameworks/react.png';
 import ReduxIcon from '@images/tehnologies/frameworks/redux.png';
 import SassIcon from '@images/tehnologies/frameworks/sass.svg';
 // tools
-import FirebaseIcon from '@images/tehnologies/tools/firebase.png';
+import FirebaseIcon from '@images/tehnologies/tools/firebase.jpg';
 import GitHubIcon from '@images/tehnologies/tools/github.png';
 import HerokuIcon from '@images/tehnologies/tools/heroku.png';
 import MongoDBIcon from '@images/tehnologies/tools/mongodb.jpg';

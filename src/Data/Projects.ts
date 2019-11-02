@@ -1,5 +1,8 @@
 import * as uuid from 'uuid/v4';
 import ShopIcon from '@images/projects/shop.png';
+import ChatIcon from '@images/projects/chat.png';
+import ParallaxIcon from '@images/projects/parallax.png';
+import PortfolioIcon from '@images/projects/portfolio.png';
 
 export const myProjects = [
   {
@@ -11,15 +14,22 @@ export const myProjects = [
   },
   {
     name: 'Chat application',
-    image: ShopIcon,
+    image: ChatIcon,
     id: uuid(),
-    text: 'chat app',
+    text:
+      "I built a Node.js chat application with express and Socket.io,Socket.io enables real-time, bidirectional and event-based communication. It works on every platform, browser or device, focusing equally on reliability and speed. This apllication looks simple but the code is a bit advanced. I didn't focus on disagn but i put some animations, like a sounds effects and you can upload your picture as avatar. I put this appliaction on heroku so click on project to see how it looks",
+  },
+  {
+    name: 'Parallax website',
+    image: ParallaxIcon,
+    id: uuid(),
+    text:
+      'I built very basic implementation of a parallax website with fixed scrolling using HTML and CSS. We can scroll and the images will stay in place.',
   },
   {
     name: 'Portfolio',
-    image: ShopIcon,
+    image: PortfolioIcon,
     id: uuid(),
-    text:
-      'Portfolio PortfolioPortfolio PortfolioPortfolioPortfolioPortfolioPortfolioPortfolioPortfolioPortfolioPortfolioPortfolio',
+    text: 'tfolioPortfolioPortfolioPortfolio',
   },
 ];

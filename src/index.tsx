@@ -2,6 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import '@styles/main.scss';
 import Main from './Main';
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<Main />, document.getElementById('root'));

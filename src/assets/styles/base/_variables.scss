@@ -2,15 +2,30 @@ $primary-color: #444;
 $secondary-color: #eece1a;
 $background-opacity: 0.8;
 
-@mixin easeOut {
-  //this is like funtion
-  transition: all 0.5s ease-out;
-}
+$content-area-widths: (
+  'small': 90vw,
+  'tablet': 768px,
+  'medium': 960px,
+  'large': 1136px
+);
 
-@function set-text-color($color) {
-  @if (lightness($color) > 40) {
-    @return #000;
-  } @else {
-    @return #fff;
-  }
-}
+$breakpoints: (
+  'small': (
+    max-width: 767px
+  ),
+  'mobile': (
+    max-width: 767px
+  ),
+  'medium': (
+    max-width: 1279px
+  ),
+  'tablet': (
+    max-width: 1023px
+  ),
+  'desktop-sd': (
+    max-width: 1279px
+  ),
+  'desktop-md': (
+    max-width: 1599px
+  )
+);

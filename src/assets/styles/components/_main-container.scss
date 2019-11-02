@@ -1,0 +1,20 @@
+.main-container {
+  width: map-get($content-area-widths, 'large');
+
+  // It's not allowed to define margins on Blocks per BEM but this case is an exception.
+  // We could achieve the same by having centered Element inside, it would be no different
+  margin-left: auto;
+  margin-right: auto;
+
+  @include responsive('medium') {
+    width: map-get($content-area-widths, 'medium');
+  }
+
+  @include responsive('tablet') {
+    width: map-get($content-area-widths, 'small');
+  }
+
+  @include responsive('small') {
+    //
+  }
+}
