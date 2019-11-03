@@ -1,4 +1,7 @@
 .contact-page {
+  @include responsive(mobile) {
+    padding-bottom: 200px;
+  }
   &__wrapper {
     display: flex;
     justify-content: space-around;

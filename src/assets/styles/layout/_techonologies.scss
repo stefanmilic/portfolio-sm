@@ -42,5 +42,9 @@
 
   &__skils {
     padding-bottom: 150px;
+
+    @include responsive(mobile) {
+      padding-bottom: 200px;
+    }
   }
 }

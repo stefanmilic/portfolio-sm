@@ -21,6 +21,10 @@
       text-align: center;
     }
 
+    @include responsive(mobile) {
+      padding-bottom: 250px;
+    }
+
     p {
       text-align: justify;
     }
