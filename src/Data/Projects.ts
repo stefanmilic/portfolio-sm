@@ -30,6 +30,7 @@ export const myProjects = [
     name: 'Portfolio',
     image: PortfolioIcon,
     id: uuid(),
-    text: 'tfolioPortfolioPortfolioPortfolio',
+    text: `Portfolio is created with React and TypeScript, also i used Aos animations and Sass structure.
+    Site is responsive, so it nicely adjusts on both large and small screens.`,
   },
 ];

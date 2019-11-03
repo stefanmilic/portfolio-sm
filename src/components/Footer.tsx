@@ -18,26 +18,26 @@ function Footer() {
     <footer className={b()}>
       <div className={b('footer-right')}>
         {socialIcons.map((icon, index) => (
-          <div className={b('wrapper')}>
-            <FontAwesomeIcon key={index} icon={icon} size='1x' />
+          <div key={index} className={b('wrapper')}>
+            <FontAwesomeIcon icon={icon} size='1x' />
           </div>
         ))}
       </div>
       <div className={b('footer-left')}>
         <p className={b('footer-links')}>
-          <NavLink to='/' className={b('link')}>
+          <NavLink to='/' className={String(b('link'))}>
             Home
           </NavLink>
-          <NavLink to='/about' className={b('link')}>
+          <NavLink to='/about' className={String(b('link'))}>
             About
           </NavLink>
-          <NavLink to='/technologies' className={b('link')}>
+          <NavLink to='/technologies' className={String(b('link'))}>
             Technologies
           </NavLink>
-          <NavLink to='/my-work' className={b('link')}>
+          <NavLink to='/my-work' className={String(b('link'))}>
             My work
           </NavLink>
-          <NavLink to='/contact' className={b('link')}>
+          <NavLink to='/contact' className={String(b('link'))}>
             Contact
           </NavLink>
         </p>

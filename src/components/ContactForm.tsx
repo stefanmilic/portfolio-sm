@@ -1,6 +1,8 @@
 import React from 'react';
 import { block } from 'bem-cn';
-// import Loader from 'react-loader-spinner';
+import Loader from 'react-loader-spinner';
+import emailjs from 'emailjs-com';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faAddressBook } from '@fortawesome/free-solid-svg-icons';
 
@@ -10,8 +12,9 @@ interface ContactFormState {
   text: string;
   name: string;
   email: string;
-  error: string;
+  error: boolean;
   isLoading: boolean;
+  infoMsg: string;
 }
 
 interface FormProps {
@@ -25,8 +28,9 @@ export default class ContactForm extends React.Component<{}, ContactFormState> {
     text: '',
     name: '',
     email: '',
-    error: '',
+    error: false,
     isLoading: false,
+    infoMsg: '',
   };
 
   handleChange = (event: any) => {
@@ -34,7 +38,8 @@ export default class ContactForm extends React.Component<{}, ContactFormState> {
   };
 
   handleSubmit = (event: any) => {
-    const templateId = 'template_R9iosiZr';
+    const templateId = process.env.REACT_APP_TEMPLATE_ID;
+    console.log(templateId);
     event.preventDefault();
     const { text, name, email } = this.state;
 
@@ -50,27 +55,40 @@ export default class ContactForm extends React.Component<{}, ContactFormState> {
   };
 
   sendFeedback = (templateId: string, variables: FormProps) => {
-    // @ts-ignore
+    this.setState({ isLoading: true });
     emailjs
       .send('gmail', templateId, variables)
       .then((res: any) => {
         console.log('Email successfully sent!');
-        this.setState({ isLoading: false, name: '', email: '', text: '' });
+        this.setState({
+          isLoading: false,
+          name: '',
+          email: '',
+          text: '',
+          infoMsg: 'Email successfully sent!',
+          error: false,
+        });
       })
       // Handle errors here however you like, or use a React error boundary
-      .catch(
-        (err: any) =>
-          console.error(
-            'Oh well, you failed. Here some thoughts on the error that occured:',
-            err,
-          ),
-        this.setState({ isLoading: false }),
-      );
+      .catch((err: any) => {
+        console.error(
+          'Oh well, you failed. Here some thoughts on the error that occured:',
+          err,
+        );
+        this.setState({
+          isLoading: false,
+          name: '',
+          email: '',
+          text: '',
+          infoMsg: `Oh well, you failed. ${err.text}`,
+          error: true,
+        });
+      });
   };
 
   render() {
-    const { text, name, email, isLoading } = this.state;
-    console.log(isLoading);
+    const { text, name, email, isLoading, infoMsg, error } = this.state;
+
     return (
       <>
         <form data-aos='fade-left' className={b()}>
@@ -80,7 +98,7 @@ export default class ContactForm extends React.Component<{}, ContactFormState> {
             <FontAwesomeIcon
               icon={faAddressBook}
               color='black'
-              className={b('icons')}
+              className={String(b('icons'))}
             />
             <input
               type='text'
@@ -97,12 +115,13 @@ export default class ContactForm extends React.Component<{}, ContactFormState> {
             <FontAwesomeIcon
               icon={faEnvelope}
               color='black'
-              className={b('icons')}
+              className={String(b('icons'))}
             />
             <input
               type='email'
               name='email'
               required
+              pattern='/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/'
               placeholder='Email'
               value={email}
               onChange={this.handleChange}
@@ -128,13 +147,16 @@ export default class ContactForm extends React.Component<{}, ContactFormState> {
             Send
           </button>
 
-          {/* <Loader
-            type='ThreeDots'
-            color='gray'
-            className={b('loader')}
-            height={50}
-            width={50}
-          /> */}
+          {isLoading && (
+            <Loader
+              type='ThreeDots'
+              color='gray'
+              className={b('loader')}
+              height={50}
+              width={50}
+            />
+          )}
+          <div className={b('info-msg', { error: error })}> {infoMsg} </div>
         </form>
       </>
     );

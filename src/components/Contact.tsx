@@ -18,8 +18,8 @@ export default function Contact() {
       <div className='sm-heading'>
         <h2 className='scale'>
           <Typist
-            avgTypingDelay={70}
-            startDelay={200}
+            avgTypingDelay={60}
+            startDelay={70}
             onTypingDone={() => setDone(true)}
             cursor={{ hideWhenDone: true, hideWhenDoneDelay: 300 }}
           >

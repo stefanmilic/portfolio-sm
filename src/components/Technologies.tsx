@@ -43,8 +43,8 @@ export default function Technologies() {
       <div className={b('sm-heading')}>
         <h2 className={b('scale')}>
           <Typist
-            avgTypingDelay={70}
-            startDelay={100}
+            avgTypingDelay={60}
+            startDelay={70}
             onTypingDone={() => setDone(true)}
             cursor={{ hideWhenDone: true, hideWhenDoneDelay: 300 }}
           >

@@ -17,8 +17,8 @@ export default function About() {
       <div className={b('sm-heading')}>
         <h2 className='scale'>
           <Typist
-            avgTypingDelay={70}
-            startDelay={100}
+            avgTypingDelay={60}
+            startDelay={70}
             onTypingDone={() => setDone(true)}
             cursor={{ hideWhenDone: true, hideWhenDoneDelay: 300 }}
           >
@@ -50,7 +50,7 @@ export default function About() {
             <a
               data-aos='fade-right'
               className={b('resume')}
-              href='https://1drv.ms/w/s!AiazCSGyfhztsgqNzYBNon-pdn6f'
+              href='https://1drv.ms/b/s!AiazCSGyfhzt1BZJekTBNmrbMRaC'
               target='_blank'
               rel='noopener noreferrer'
             >

@@ -11,14 +11,25 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const b = block('home-page');
 
+const socialIcons = [
+  { icon: faGithub, link: 'https://github.com/stefanmilic' },
+  { icon: faLinkedin, link: 'https://www.linkedin.com/in/stefan-milic/' },
+  { icon: faViber, link: 'viber://chat?number=+381665236337' },
+  { icon: faEnvelope, link: 'mailto:milicstefan6@gmail.com' },
+];
+
+const handleClick = (value: string) => () => {
+  window.location.href = value;
+};
+
 const Home = () => {
   return (
     <div className={b()}>
       <div className={b('name')}>
         <Typist
-          className={b('typing-text')}
-          avgTypingDelay={200}
-          startDelay={1000}
+          className={String(b('typing-text'))}
+          avgTypingDelay={150}
+          startDelay={700}
           cursor={{ hideWhenDone: true, hideWhenDoneDelay: 300 }}
         >
           Stefan Milic
@@ -26,10 +37,15 @@ const Home = () => {
       </div>
       <div className={b('position')}> Programer, Frontend Developer</div>
       <div className={b('icons')}>
-        <FontAwesomeIcon icon={faGithub} size='2x' />
-        <FontAwesomeIcon icon={faLinkedin} size='2x' />
-        <FontAwesomeIcon icon={faViber} size='2x' mask={['fas', 'circle']} />
-        <FontAwesomeIcon icon={faEnvelope} size='2x' />
+        {socialIcons.map(item => (
+          <React.Fragment key={item.link}>
+            <FontAwesomeIcon
+              icon={item.icon}
+              size='2x'
+              onClick={handleClick(item.link)}
+            />
+          </React.Fragment>
+        ))}
       </div>
       <div className={b('quote')} data-aos='zoom-in' data-aos-delay='1000'>
         <h2>

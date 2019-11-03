@@ -27,7 +27,7 @@ const Project: React.FC<ProjectProps> = ({ onHandleShow, name, image }) => (
         <div className={b('text')}>{name}</div>
       </div>
     </div>
-    <div className={b('tags')}>
+    {/* <div className={b('tags')}>
       <a
         target='_blank'
         rel='noopener noreferrer'
@@ -36,10 +36,10 @@ const Project: React.FC<ProjectProps> = ({ onHandleShow, name, image }) => (
       >
         <i className='fas fa-eye'></i>Project
       </a>
-      <a href='#' className={b('btn-dark')}>
+      <a href='https://shopp-cart.herokuapp.com' className={b('btn-dark')}>
         <i className='fab fa-github'></i>Github
       </a>
-    </div>
+    </div> */}
   </div>
 );
 
@@ -78,8 +78,8 @@ const MyWork = () => {
       <div className={b('sm-heading')}>
         <h2 className={b('scale')}>
           <Typist
-            avgTypingDelay={70}
-            startDelay={100}
+            avgTypingDelay={60}
+            startDelay={70}
             onTypingDone={() => setDone(true)}
             cursor={{ hideWhenDone: true, hideWhenDoneDelay: 300 }}
           >
