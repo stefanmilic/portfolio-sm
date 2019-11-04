@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7e47964a12914fa5afb9fd78cbff1558",
+    "revision": "038b5316fe13acf030685f472c24cfd4",
     "url": "/portfolio-sm/index.html"
   },
   {
-    "revision": "a9ab40a3dd46f6089919",
+    "revision": "4d373cbaeca5e83d84b7",
     "url": "/portfolio-sm/static/css/2.5853c7f9.chunk.css"
   },
   {
-    "revision": "a332f80af12bb6dddc54",
-    "url": "/portfolio-sm/static/css/main.f648d303.chunk.css"
+    "revision": "cd87925ed24f34b63166",
+    "url": "/portfolio-sm/static/css/main.827e0ecc.chunk.css"
   },
   {
-    "revision": "a9ab40a3dd46f6089919",
-    "url": "/portfolio-sm/static/js/2.b99b2334.chunk.js"
+    "revision": "4d373cbaeca5e83d84b7",
+    "url": "/portfolio-sm/static/js/2.2a694078.chunk.js"
   },
   {
-    "revision": "a332f80af12bb6dddc54",
-    "url": "/portfolio-sm/static/js/main.87fe387f.chunk.js"
+    "revision": "cd87925ed24f34b63166",
+    "url": "/portfolio-sm/static/js/main.134a718f.chunk.js"
   },
   {
     "revision": "9c7f45d28e6c0e7805ed",
@@ -40,8 +40,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-sm/static/media/chat.226d578c.png"
   },
   {
-    "revision": "18860aa4f350b995fd8d05a1722992ef",
-    "url": "/portfolio-sm/static/media/cover.18860aa4.jpg"
+    "revision": "9a18d95e119e2fcdd4f91f4ddb36ff14",
+    "url": "/portfolio-sm/static/media/cover.9a18d95e.jpg"
   },
   {
     "revision": "d4c80328e5d8fe2be499b45a646e6528",
@@ -76,12 +76,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-sm/static/media/open-sans-v17-regular.e15b8743.woff"
   },
   {
-    "revision": "31d6942f334b23160ad41967c20ad79e",
-    "url": "/portfolio-sm/static/media/parallax.31d6942f.png"
+    "revision": "af9c75f2c9e1fd0dbd72f60e7335285b",
+    "url": "/portfolio-sm/static/media/parallax.af9c75f2.jpg"
   },
   {
-    "revision": "ad9204cb938c0b200366e3a7a014a48a",
-    "url": "/portfolio-sm/static/media/portfolio.ad9204cb.png"
+    "revision": "0dc9ee98d0b6fe483b24a2cb702167ca",
+    "url": "/portfolio-sm/static/media/portfolio.0dc9ee98.jpg"
   },
   {
     "revision": "7c0fdc490914ad5e54763db4ef955066",
@@ -96,8 +96,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/portfolio-sm/static/media/sass.8e766e95.svg"
   },
   {
-    "revision": "9bbd52be69ab724cba1fb5cdb80c9945",
-    "url": "/portfolio-sm/static/media/shop.9bbd52be.png"
+    "revision": "a2b483ceb7572473bbcbbb5601a45103",
+    "url": "/portfolio-sm/static/media/shop.a2b483ce.jpg"
   },
   {
     "revision": "4e96f1110cb872407e837d4fc1440f96",
