@@ -39,7 +39,6 @@ export default class ContactForm extends React.Component<{}, ContactFormState> {
 
   handleSubmit = (event: any) => {
     const templateId = process.env.REACT_APP_TEMPLATE_ID;
-    console.log(templateId);
     event.preventDefault();
     const { text, name, email } = this.state;
 
@@ -151,7 +150,7 @@ export default class ContactForm extends React.Component<{}, ContactFormState> {
             <Loader
               type='ThreeDots'
               color='gray'
-              className={b('loader')}
+              className={String(b('loader'))}
               height={50}
               width={50}
             />
