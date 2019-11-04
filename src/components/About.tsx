@@ -38,7 +38,7 @@ export default function About() {
           />
           <div className={b('bio')}>
             <h3 className={b('text-secondary')}>Biography</h3>
-            <p data-aos='flip-left'>
+            <p data-aos='fade-left'>
               Engineer of electrical and computer science. Specialized for web
               development skilled in designing and creating reusable and stable
               user interface components. Proficient in HTML, CSS, JavaScript,
