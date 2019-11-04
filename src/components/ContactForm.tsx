@@ -146,7 +146,7 @@ export default class ContactForm extends React.Component<{}, ContactFormState> {
             Send
           </button>
 
-          {!isLoading && (
+          {isLoading && (
             <Loader
               type='ThreeDots'
               color='gray'
