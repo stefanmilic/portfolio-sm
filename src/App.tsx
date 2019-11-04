@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Switch, HashRouter as Router } from 'react-router-dom';
 import { block } from 'bem-cn';
 import Home from '@components/Home';
 import About from '@components/About';
