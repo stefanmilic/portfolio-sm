@@ -1,7 +1,7 @@
 {
   "name": "portofolio",
   "version": "0.1.0",
-  "homepage": "https://stefanmilic.github.io/sm-portfolio",
+  "homepage": "https://stefanmilic.github.io/portfolio-sm",
   "private": true,
   "dependencies": {
     "@babel/core": "7.6.0",
