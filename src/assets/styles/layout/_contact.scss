@@ -1,5 +1,5 @@
 .contact-page {
-  @include responsive(mobile) {
+  @include responsive(tablet) {
     padding-bottom: 200px;
   }
   &__wrapper {

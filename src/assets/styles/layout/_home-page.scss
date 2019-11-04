@@ -1,4 +1,7 @@
 .home-page {
+  @include responsive(mobile) {
+    padding-bottom: 45px;
+  }
   &__name {
     padding-top: 20vh;
     font-size: 6rem;
@@ -48,6 +51,7 @@
       margin-top: 40px;
       text-align: center;
       margin: auto;
+      padding: 20px 7px;
     }
   }
 }
