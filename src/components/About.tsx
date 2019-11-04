@@ -50,7 +50,7 @@ export default function About() {
             <a
               data-aos='fade-right'
               className={b('resume')}
-              href='https://1drv.ms/b/s!AiazCSGyfhzt1BZJekTBNmrbMRaC'
+              href='https://1drv.ms/b/s!AiazCSGyfhzt1BdwWJrAy5N2B__w'
               target='_blank'
               rel='noopener noreferrer'
             >
